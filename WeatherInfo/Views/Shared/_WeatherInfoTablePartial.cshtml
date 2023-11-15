@@ -1,0 +1,27 @@
+﻿@model List<WeatherDetail>
+
+<table class="table">
+    <tr>
+        <th>Location</th>
+        <th>Current Temperature(Celsius)</th>
+        <th>Minimum Temperature(Celsius)</th>
+        <th>Maximum Temperature(Celsius)</th>
+        <th>Humidity</th>
+        <th>Sunrise</th>
+        <th>Sunset</th>
+        <th>DateTime</th>
+    </tr>
+    @foreach (var weatherDetail in Model)
+    {
+        <tr>
+            <td>@weatherDetail.Location</td>
+            <td>@weatherDetail.CurrentTemperature</td>
+            <td>@weatherDetail.MinimumTemperature</td>
+            <td>@weatherDetail.MaximumTemperature</td>
+            <td>@weatherDetail.Humidity</td>
+            <td>@weatherDetail.Sunrise</td>
+            <td>@weatherDetail.Sunset</td>
+            <td>@weatherDetail.CreatedAt</td>
+        </tr>
+    }
+</table>
